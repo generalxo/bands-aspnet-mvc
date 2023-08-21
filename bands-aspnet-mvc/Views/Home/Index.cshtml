@@ -1,0 +1,11 @@
+﻿@model List<BandModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<ul>
+	@foreach (var band in Model)
+	{
+		<li><a href="@Url.Action("Member", "Home", new { id = band.BandId })">@band.Name</a></li>
+	}
+</ul>

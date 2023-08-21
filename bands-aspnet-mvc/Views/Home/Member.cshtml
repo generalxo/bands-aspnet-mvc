@@ -1,0 +1,14 @@
+﻿@model List<BandMemberModel>
+@{
+    ViewData["Title"] = "Member";
+}
+<h1>@ViewData["Title"]</h1>
+
+<ul>
+@foreach (var bandMember in Model)
+	{
+		<li>@bandMember.Name</li>
+	}
+</ul>
+
+
