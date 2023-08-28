@@ -1,0 +1,15 @@
+﻿@using bands_aspnet_mvc.Models.ViewModels;
+@model CreateBandViewModel
+@{
+
+}
+@using (Html.BeginForm()){
+	@Html.ValidationSummary()
+
+	@Html.LabelFor(m => m.Name)
+	@Html.EditorFor(m => m.Name)
+	@Html.ValidationMessageFor(m => m.Name)
+
+	<input type="submit" value="Create" />
+
+}

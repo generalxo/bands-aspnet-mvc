@@ -1,5 +1,6 @@
 ﻿using bands_aspnet_mvc.ActionFilter;
 using bands_aspnet_mvc.Models;
+using bands_aspnet_mvc.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace bands_aspnet_mvc.Controllers
@@ -36,5 +37,17 @@ namespace bands_aspnet_mvc.Controllers
 
 			return View(meberList);
 		}
+
+		public IActionResult Create()
+		{
+			var model = new BandModel();
+			var viewModel = new CreateBandViewModel
+			{
+				Name = model.Name
+			};
+
+			return View(viewModel);
+		}
+
 	}
 }
