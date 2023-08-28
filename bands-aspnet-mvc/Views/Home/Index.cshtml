@@ -6,6 +6,6 @@
 <ul>
 	@foreach (var band in Model)
 	{
-		<li><a href="@Url.Action("Member", "Home", new { id = band.BandId })">@band.Name</a></li>
+		<li><a href="@Url.Action("Member", "Member", new { id = band.BandId })">@band.Name</a></li>
 	}
 </ul>
